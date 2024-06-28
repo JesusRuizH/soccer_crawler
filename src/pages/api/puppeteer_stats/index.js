@@ -7,7 +7,7 @@ export default async function home(req, res) {
     })
 
     const page = await browser.newPage()
-    await page.goto('https://www.365scores.com/es-mx/football/match/friendly-international-570/slovakia-wales-5039-5043-570#id=4054580',{
+    await page.goto('https://www.365scores.com/es-mx/football/match/european-qualifiers-6071/england-italy-2375-5054-6071#id=3660445',{
         waitUntil: 'networkidle2',
     })
 

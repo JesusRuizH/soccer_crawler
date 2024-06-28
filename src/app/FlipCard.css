@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flip-card {
+    perspective: 1000px; /* Efecto de perspectiva para el 3D */
+    width: 500px; /* Ancho ajustado */
+    height: 500px; /* Altura ajustada */
+    margin: 10px; /* Margen entre las cartas */
+    position: relative;
+    transition: transform 0.8s;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 5px; /* Hereda bordes redondeados */
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flip-card-front {
+    background-color: #ffffff; /* Fondo blanco */
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9; /* Fondo azul rey */
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh; /* Ajustar la altura para centrar verticalmente */
+  }
+  
